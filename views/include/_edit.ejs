@@ -1,0 +1,48 @@
+<form class="container" method="POST" id="update_user">
+	<div class="mb-3">
+		<label for="name" class="form-label">Name</label>
+		<input
+			type="text"
+			class="form-control"
+			id="name"
+			required="true"
+			name="name"
+      value="<%= data.name %>"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="email" class="form-label">Email</label>
+		<input
+			type="email"
+			class="form-control"
+			id="email"
+			required="true"
+			name="email"
+      value="<%= data.email %>"
+     
+		/>
+	</div>
+
+	<div class="custom-control custom-radio form-control mb-3">
+		gender :
+
+		<label class="radio-inline mx-2">
+			<input type="radio" name="gender" value="Male" <%= data.gender=="male" ? "checked":undefined%>/> Male
+		</label>
+		<label class="radio-inline mx-2">
+			<input type="radio" name="gender"  value="female" <%= data.gender=="female" ? "checked":undefined %> /> Female
+		</label>
+	</div>
+	<div class="custom-control custom-radio form-control mb-3">
+		Status
+		<label class="radio-inline mx-2">
+			<input type="radio" name="status" value="active" <%= data.status=="active" ? "checked":undefined%>/> Active
+		</label>
+		<label class="radio-inline mx-2">
+			<input type="radio" name="status" value="inactive" <%= data.gender=="inactive" ? "checked":undefined%> /> InActive
+		</label>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Submit</button>
+  
+</form>

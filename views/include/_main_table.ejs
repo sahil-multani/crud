@@ -1,0 +1,33 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">email</th>
+			<th scope="col">Gender</th>
+			<th scope="col">Status</th>
+			<th scope="col">Action</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<% users.map((user,i)=>{ %>
+		<tr>
+			<th scope="row"><%= i+1 %></th>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+			<td><%= user.gender %></td>
+			<td><%= user.status %></td>
+			<td> <a href="/edit/<%= user._id.toString() %>" class="btn btn-primary btn-sm">
+				<i class="fas fa-pencil-alt"></i>
+			</a>
+			
+			<button class="btn btn-danger btn-sm delete float-right" data-id="<%= user._id%>" >
+
+				<i class="fas fa-trash"></i></td>
+			</button>	
+			
+		</tr>
+		<%})%>
+	</tbody>
+</table>
