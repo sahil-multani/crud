@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
 const controller = require('../../controller/controller');
-const url = 'http://localhost:5000/api/user';
+const url = process.env.URL;
 const axios = require('axios');
 route.get('/', (req, res) => {
 	axios
