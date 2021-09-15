@@ -1,5 +1,5 @@
 let ele = document.querySelectorAll('.delete');
-let url = 'http://localhost:5000/api/user';
+let url = process.env.URL;
 for (let e of ele) {
 	let id = e.getAttribute('data-id');
 	url = url + '/' + id.toString();

@@ -1,4 +1,4 @@
-let url = 'http://localhost:5000/api/user';
+let url = process.env.URL;
 let arr = {};
 let id = window.location.pathname;
 id = id.replace('/edit/', '');
